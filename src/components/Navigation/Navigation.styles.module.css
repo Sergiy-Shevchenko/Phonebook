@@ -1,0 +1,19 @@
+    .navi {
+        display: flex;
+        justify-content: spase-between;
+        
+    }
+    .list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .item {
+        margin-right: 10px;
+    }
+
+    .button {
+        margin-left: 10px;
+    }
+
