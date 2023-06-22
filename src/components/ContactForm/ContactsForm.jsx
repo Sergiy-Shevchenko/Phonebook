@@ -1,25 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+// import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { Notify } from 'notiflix';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selector';
+// import { addContact } from 'redux/operations';
+// import { selectContacts } from 'redux/selector';
 
 const styles = {
-// container: {
-//   width: 300,
-//   border: 2,
-//   borderColor: 'black',
-//   paddingTop: 30,
-//   marginLeft: 'auto',
-// marginRight: 'auto',
 
-
-
-
-//   minHeigth: 'calc(100vh-50px)',
-//   display: 'flex',
-//   alignItems: 'center',
-// },
 title: {
 fontWisght: 500,
 fontSize: 36,
@@ -82,13 +68,13 @@ export const ContactsForm = () => {
   const hendleSubmit = event => {
     event.preventDefault();
 
-    const notmalizeNewContact = name.toLowerCase();
-    if (name === '') {
-      return Notify.warning(`Please enter your name`);
-    }
-    if (number === '') {
-      return Notify.warning(`${name} please enter your number`);
-    }
+    // const notmalizeNewContact = name.toLowerCase();
+    // if (name === '') {
+    //   return Notify.warning(`Please enter your name`);
+    // }
+    // if (number === '') {
+    //   return Notify.warning(`${name} please enter your number`);
+    // }
     // if (
     //   items.find(
     //     contact => contact.name.toLocaleLowerCase() === notmalizeNewContact
@@ -100,10 +86,10 @@ export const ContactsForm = () => {
     // dispatch(addContact({ name, number }));
     // resetForm();
   };
-  const resetForm = () => {
-    setName('');
-    setNumber('');
-  };
+  // const resetForm = () => {
+  //   setName('');
+  //   setNumber('');
+  // };
 
   return (
     <div style={styles.section}>
