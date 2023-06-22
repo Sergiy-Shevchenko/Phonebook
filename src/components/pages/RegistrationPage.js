@@ -4,7 +4,7 @@ import { useState } from "react"
 
 const styles = {
     container: {
-        width: 300,
+        width: 1400,
         border: 2,
         borderColor: 'black',
         paddingTop: 30,
@@ -33,11 +33,13 @@ const styles = {
       textAlign: 'center',
     },
     section: {
-        width: '100%',
+        width: 300,
     marginTop: 30,
     border: '1px solid grey',
     borderRadius: '10px',
     padding: 10,
+    marginLeft: 'auto',
+      marginRight: 'auto',
         },
     button: {
         fontSize: 16,

@@ -3,8 +3,12 @@ import { NavLinkStyled } from "./Navigation.styled";
 const styled = {
     navi: {
         display: 'flex',
+        // width: 300,
         justifyContent: 'space-around',
-        backgroundColor: 'lightblue',
+        backgroundColor: 'rgb(217, 218, 218)',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        borderBottom: '2px',
         
     },
     list: {

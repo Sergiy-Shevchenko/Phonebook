@@ -1,13 +1,14 @@
+import {React} from 'react';
+import { ContactsForm } from "components/ContactForm/ContactsForm";
+import ContactsList from 'components/ContactList/ContactsList';
 
 const styles = {
     container: {
-      minHeigth: 'calc(100vh-50px)',
-      display: 'flex',
-      alignItems: 'center',
+    alignItems: 'center',
     },
     title: {
-      fontWisght: 500,
-      fontSize: 48,
+      fontWisght: 400,
+      fontSize: 36,
       textAlign: 'center',
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -18,6 +19,10 @@ export const Phonebook = () => {
     return (
         <div style={styles.container}>
              <h2 style={styles.title}>Phonebook</h2>
+             <ContactsForm/>
+         
+            
+
         </div>   
       )        
 }     
