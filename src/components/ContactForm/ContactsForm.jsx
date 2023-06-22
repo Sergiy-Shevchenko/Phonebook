@@ -1,6 +1,6 @@
 // import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
-import { Notify } from 'notiflix';
+// import { Notify } from 'notiflix';
 // import { addContact } from 'redux/operations';
 // import { selectContacts } from 'redux/selector';
 
@@ -26,7 +26,6 @@ textAlign: 'center',
 },
 section: {
   width: 300,
-  border: 2,
   borderColor: 'black',
   paddingTop: 30,
   marginLeft: 'auto',
