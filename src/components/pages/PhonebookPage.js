@@ -1,6 +1,6 @@
 import {React} from 'react';
 import { ContactsForm } from "components/ContactForm/ContactsForm";
-import ContactsList from 'components/ContactList/ContactsList';
+//import ContactsList from 'components/ContactList/ContactsList';
 
 const styles = {
     container: {

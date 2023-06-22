@@ -1,4 +1,3 @@
-import { Reack } from 'react';
 import phone from '../Icons/telephonepng.parspng.com-5.png'
 
 const styles = {
@@ -10,7 +9,7 @@ const styles = {
   },
   title: {
     fontWisght: 500,
-    fontSize: 48,
+    fontSize: 36,
     textAlign: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
