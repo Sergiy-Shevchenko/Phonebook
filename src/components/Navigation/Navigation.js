@@ -1,54 +1,19 @@
-import { NavLinkStyled } from "./Navigation.styled";
+import { NavLink } from 'react-router-dom';
 
-const styled = {
-    navi: {
-        display: 'flex',
-        // width: 300,
-        justifyContent: 'space-around',
-        backgroundColor: 'rgb(217, 218, 218)',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        borderBottom: '2px',
-        
-    },
-    list: {
-       
-        display: 'flex',
-        listStyle:'none',
-        alignItems: 'center',
-    
-    },
-    item: {
-         fontSize: 18,
-        textColor: 'green',
-        marginRight: 10,
-    },
-    button: {
-        fontSize: 16,
-        border: '1px solid black',
-        borderRadius: '3px',
-        marginLeft: 10,
-    }
-
-}
+import css from './Navigation.styles.module.css';
 
 export const Navigation = () => {
-    return(
-        <nav style={styled.navi}>
-            <h2>Phonebook</h2>
-            <ul style={styled.list}>
-                <li style={styled.item}><NavLinkStyled to='/'>Home</NavLinkStyled></li>
-                <li style={styled.item}><NavLinkStyled to='phonebook'>Phonebook</NavLinkStyled></li>
-            </ul>
-            <ul style={styled.list}>
-                <li style={styled.item}><NavLinkStyled to='registration'>Register</NavLinkStyled></li>
-                <li style={styled.item}><NavLinkStyled to='login'>Log In</NavLinkStyled></li>
-            </ul>
-            <div style={styled.list} >
-                <p style={styled.item}>Welcome</p>
-                <button type='button' style={styled.button}>Exit</button>
-            </div>
-            
-        </nav>
-    )
-}
+  return (
+    <div className={css.navi}>
+      <h2 className={css.title}>Phonebook</h2>
+      <nav className={css.list}>
+        <NavLink className={css.item} to="/">
+          Home
+        </NavLink>
+        <NavLink className={css.item} to="phonebook">
+          Phonebook
+        </NavLink>
+      </nav>
+    </div>
+  );
+};

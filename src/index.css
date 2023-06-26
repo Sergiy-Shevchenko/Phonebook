@@ -22,3 +22,11 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+  li {
+  text-decoration: none;
+
+}
+
+a.active {
+  color:blue;
+}

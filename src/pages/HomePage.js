@@ -1,10 +1,9 @@
-import phone from '../Icons/telephonepng.parspng.com-5.png'
+import phone from '../components/Icons/telephonepng.parspng.com-5.png'
 
 const styles = {
   container: {
     minHeigth: 'calc(100vh-50px)',
-    // display: 'flex',
-    alignItems: 'center',
+        alignItems: 'center',
    
   },
   title: {
@@ -13,6 +12,7 @@ const styles = {
     textAlign: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
+    color: 'rgba(5, 5, 254, 0.7)'
   },
  img: {
   display: 'block',

@@ -1,10 +1,42 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { contactsReduser } from './contactsSlice';
-import { filterReducer } from './filterSlice';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+// import { contactsReduser } from './contacts/contactsSlice';
+// import { filterReducer } from './filterSlice';
+import { authReducer } from './ayth/auth-slice';
+import storage from 'redux-persist/lib/storage'
+
+const middleware = [
+  ...getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    },
+  }),
+];
+
+const authPersistConfig = {
+  key: 'auth',
+  storage,
+  whitelist: ['token']
+}
 
 export const store = configureStore({
   reducer: {
-    contacts: contactsReduser,
-    filter: filterReducer,
+    auth: persistReducer(authPersistConfig, authReducer),
+    // contacts: contactsReduser,
+    // filter: filterReducer,
   },
+  middleware,
+  devTools: process.env.NODE_ENV === 'development',
+
 });
+
+export const persistor = persistStore(store)
