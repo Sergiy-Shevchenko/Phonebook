@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as AddIcon } from '../Icons/phone.svg';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from '../../redux/contacts/contacts-operations';
 import css from './ContactItem.module.css';
 
-export const ContactsItem = ({ id, name, number }, key) => {
+export const ContactsItem = ({id, name, number }, key) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => dispatch(deleteContact(id));
@@ -25,10 +25,10 @@ export const ContactsItem = ({ id, name, number }, key) => {
   );
 };
 
-ContactsItem.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-};
+// ContactsItem.propTypes = {
+//   id: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   number: PropTypes.string.isRequired,
+// };
 
 export default ContactsItem;

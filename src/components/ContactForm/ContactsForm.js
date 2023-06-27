@@ -1,8 +1,8 @@
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
-// import { Notify } from 'notiflix';
-// import { addContact } from 'redux/operations';
-// import { selectContacts } from 'redux/selector';
+import { Notify } from 'notiflix';
+import { addContact } from '../../redux/contacts/contacts-operations';
+import { selectContacts } from '../../redux/contacts/selector';
 
 const styles = {
 
@@ -22,7 +22,7 @@ paddingBottom: 5,
 input: {
 fontWisght: 100,
 fontSize: 24,
-textAlign: 'center',
+// textAlign: 'center',
 },
 section: {
   width: 300,
@@ -54,8 +54,8 @@ export const ContactsForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  // const dispatch = useDispatch();
-  // const items = useSelector(selectContacts);
+  const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
 
   const hendleChangetNane = ({ target: { value } }) => {
     setName(value);
@@ -67,28 +67,28 @@ export const ContactsForm = () => {
   const hendleSubmit = event => {
     event.preventDefault();
 
-    // const notmalizeNewContact = name.toLowerCase();
-    // if (name === '') {
-    //   return Notify.warning(`Please enter your name`);
-    // }
-    // if (number === '') {
-    //   return Notify.warning(`${name} please enter your number`);
-    // }
-    // if (
-    //   items.find(
-    //     contact => contact.name.toLocaleLowerCase() === notmalizeNewContact
-    //   )
-    // ) {
-    //   return Notify.failure(`${name} is alredy in contacts`);
-    // }
+  const notmalizeNewContact = name.toLowerCase();
+  if (name === '') {
+  return Notify.warning(`Please enter your name`);
+  }
+  if (number === '') {
+     return Notify.warning(`${name} please enter your number`);
+   }
+  //  if (
+  //    contacts.find(
+  //      contact => contact.name.toLocaleLowerCase() === notmalizeNewContact
+  //    )
+  //  ) {
+  //    return Notify.failure(`${name} is alredy in contacts`);
+  //  }
 
-    // dispatch(addContact({ name, number }));
-    // resetForm();
-  };
-  // const resetForm = () => {
-  //   setName('');
-  //   setNumber('');
-  // };
+      dispatch(addContact({ name, number }));
+      resetForm();
+   };
+    const resetForm = () => {
+      setName('');
+      setNumber('');
+    };
 
   return (
     <div style={styles.section}>

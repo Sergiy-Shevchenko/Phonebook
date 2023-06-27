@@ -9,8 +9,8 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-// import { contactsReduser } from './contacts/contactsSlice';
-// import { filterReducer } from './filterSlice';
+import { contactsReduser } from './contacts/contacts-slice';
+import { filterReducer } from './contacts/filter-slice';
 import { authReducer } from './ayth/auth-slice';
 import storage from 'redux-persist/lib/storage'
 
@@ -31,8 +31,8 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    // contacts: contactsReduser,
-    // filter: filterReducer,
+    contacts: contactsReduser,
+    filter: filterReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',

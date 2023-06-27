@@ -1,12 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fethcContacts, addContact, deleteContact } from './operations';
+import { fethcContacts, addContact, deleteContact } from './contacts-operations';
 
 const initialState = {
-  contacts: {
-  items: [],
+   items: [],
   isLoading: false,
   error: null,
-  }
 };
 
 const handlePending = state => {
