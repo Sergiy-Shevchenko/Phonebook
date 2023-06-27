@@ -25,7 +25,7 @@ const styles = {
     input: {
       fontWisght: 100,
       fontSize: 24,
-      textAlign: 'center',
+    //   textAlign: 'center',
     },
     section: {
         width: '100%',

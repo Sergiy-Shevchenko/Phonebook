@@ -4,12 +4,11 @@ import {register} from '../../redux/ayth/auth-operation';
 
 const styles = {
   container: {
-    width: 1400,
-    border: 2,
-    borderColor: 'black',
-    paddingTop: 30,
-    marginLeft: 'auto',
+      width: 300,
+       paddingTop: 30,
+      marginLeft: 'auto',
     marginRight: 'auto',
+  
   },
   title: {
     fontWisght: 500,
@@ -19,34 +18,34 @@ const styles = {
     marginRight: 'auto',
   },
   title_input: {
-    fontSize: 18,
-    fontWisght: 100,
-    paddingTop: 10,
-    paddingBottom: 5,
+      fontSize: 18, 
+      fontWisght: 100,
+  paddingTop: 10,
+  paddingBottom: 5,
   },
   input: {
     fontWisght: 100,
-    fontSize: 18,
+    fontSize: 24,
     // textAlign: 'center',
   },
   section: {
-    width: 300,
-    marginTop: 30,
-    border: '1px solid grey',
-    borderRadius: '10px',
-    padding: 10,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-  },
+      width: '100%',
+  marginTop: 30,
+  border: '1px solid grey',
+  borderRadius: '10px',
+  padding: 10,
+
+      },
   button: {
-    fontSize: 16,
-    marginTop: 15,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    border: '1px solid grey',
-    borderRadius: '2px',
-  },
+      fontSize: 16,
+      marginTop: 15,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      border: '1px solid grey',
+      borderRadius: '2px',
+  } 
 };
+
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -69,13 +68,13 @@ export const RegisterForm = () => {
   };
 console.log(name);
   const handleSubmit = event => {
-    event.preventeDefault();
+    event.preventDefault();
 
     dispatch(register({ name, email, password }));
       
-    // setName('');
-    // setMail('');
-    // setPassword('');
+    setName('');
+    setMail('');
+    setPassword('');
   
   };
 
