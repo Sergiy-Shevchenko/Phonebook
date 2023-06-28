@@ -4,7 +4,7 @@ import { logIn } from 'redux/ayth/auth-operation';
 
 const styles = {
   container: {
-    width: 300,
+  
     paddingTop: 30,
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -23,15 +23,17 @@ const styles = {
     paddingBottom: 5,
   },
   input: {
-    fontWisght: 100,
-    fontSize: 24,
+    // fontWisght: 100,
+    fontSize: 18,
   },
   section: {
-    width: '100%',
+    width: 230,
     marginTop: 30,
     border: '1px solid grey',
     borderRadius: '10px',
     padding: 10,
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   button: {
     fontSize: 16,

@@ -14,18 +14,18 @@ marginLeft: 'auto',
 marginRight: 'auto',
 },
 title_input: {
-  fontSize: 18, 
+  fontSize: 16, 
   fontWisght: 100,
 paddingTop: 10,
 paddingBottom: 5,
 },
 input: {
 fontWisght: 100,
-fontSize: 24,
+fontSize: 18,
 // textAlign: 'center',
 },
 section: {
-  width: 300,
+  width: 230,
   borderColor: 'black',
   paddingTop: 30,
   marginLeft: 'auto',
@@ -74,13 +74,13 @@ export const ContactsForm = () => {
   if (number === '') {
      return Notify.warning(`${name} please enter your number`);
    }
-  //  if (
-  //    contacts.find(
-  //      contact => contact.name.toLocaleLowerCase() === notmalizeNewContact
-  //    )
-  //  ) {
-  //    return Notify.failure(`${name} is alredy in contacts`);
-  //  }
+   if (
+     contacts.find(
+       contact => contact.name.toLocaleLowerCase() === notmalizeNewContact
+     )
+   ) {
+     return Notify.failure(`${name} is alredy in contacts`);
+   }
 
       dispatch(addContact({ name, number }));
       resetForm();

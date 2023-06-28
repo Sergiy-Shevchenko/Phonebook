@@ -4,9 +4,20 @@ import { HomePage } from "../pages/HomePage";
 import { Phonebook } from "../pages/PhonebookPage";
 import { Login } from "../pages/LoginPage";
 import { Register } from "../pages/RegistrationPage";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsRefreshing } from "redux/ayth/auth-selector";
+import { useEffect } from "react";
+import { refreshUser } from "redux/ayth/auth-operation";
 
 export const App = () => {
-  return (
+  const dispatch = useDispatch();
+  const isRegresing = useSelector(selectIsRefreshing);
+  
+  useEffect(()=>{
+    dispatch(refreshUser())
+  }, [dispatch])
+
+  return isRegresing ? ( <b>Refreshing user...</b>) : (
     <div>
       
       <Routes>
