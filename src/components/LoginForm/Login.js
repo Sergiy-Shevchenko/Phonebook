@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
 import { logIn } from 'redux/ayth/auth-operation';
 
 const styles = {
@@ -30,7 +29,9 @@ const styles = {
   section: {
     width: 230,
     marginTop: 30,
-    border: '1px solid grey',
+    border: '1px solid rgb(0, 139, 252)',
+    boxShadow: `0px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16)`,
     borderRadius: '10px',
     padding: 10,
     marginLeft: 'auto',

@@ -1,20 +1,16 @@
-import { useSelector } from "react-redux"
-import { AuthNav } from "components/AuthNav/AuthNav"
-import { Navigation } from "components/Navigation/Navigation"
-import { UserMenu } from "components/UserMenu/UserMenu"
-import { selectIsLoggedIn } from "redux/ayth/auth-selector"
-
+import { useSelector } from 'react-redux';
+import { AuthNav } from 'components/AuthNav/AuthNav';
+import { Navigation } from 'components/Navigation/Navigation';
+import { UserMenu } from 'components/UserMenu/UserMenu';
+import { selectIsLoggedIn } from 'redux/ayth/auth-selector';
 
 export const AppBar = () => {
-const isLoggedIn = useSelector(selectIsLoggedIn)
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
-    return (
+  return (
     <>
-    <Navigation/>
-    {isLoggedIn ? <UserMenu/> : <AuthNav/>}
-    
-    
+      <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </>
-
-    )
-}
+  );
+};
