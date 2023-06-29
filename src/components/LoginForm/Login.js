@@ -28,6 +28,7 @@ const styles = {
   },
   section: {
     width: 230,
+    height: 230,
     marginTop: 30,
     border: '1px solid rgb(0, 139, 252)',
     boxShadow: `0px 2px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -36,6 +37,9 @@ const styles = {
     padding: 10,
     marginLeft: 'auto',
     marginRight: 'auto',
+  },
+  form: {
+    marginTop: 30,
   },
   button: {
     fontSize: 16,
@@ -76,7 +80,7 @@ export const LoginForm = () => {
     <div style={styles.container}>
       <h3 style={styles.title}>Log In form</h3>
       <div style={styles.section}>
-        <form onSubmit={handleSubmit}>
+        <form style={styles.form} onSubmit={handleSubmit}>
           <label>
             <h3 style={styles.title_input}>E-mail</h3>
             <input
