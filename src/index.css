@@ -24,9 +24,8 @@ ul {
 }
   li {
   text-decoration: none;
-
 }
 
 a.active {
-  color:blue;
+  color:rgb(0, 139, 252);
 }

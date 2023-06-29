@@ -1,25 +1,33 @@
 .list {
-       
-    display: flex;
-    list-style:none;
-    align-items: center;
-    margin-left: 25px;
-    background-color: rgb(217, 218, 218);
-
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: 25px;
+  background-color: rgb(217, 218, 218);
 }
 .item {
- 
-    display: flex;
-    color: black;
-    text-decoration:none;
-   
+  color: rgb(0, 139, 252);
+  display: flex;
+  color: black;
+  text-decoration: none;
 }
 
-
-
 .button {
-    font-size: 16;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin-left: 10px;
+  font-size: 16;
+  border: 1px solid rgb(0, 139, 252);
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.button :hover {
+  background-color: blue;
+  color: rgb(252, 253, 254);
+}
+
+.img {
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

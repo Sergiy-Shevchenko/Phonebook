@@ -1,76 +1,31 @@
 .navi {
-    display: flex;    
-    justify-content:start ;
-    background-color: rgb(217, 218, 218);
-    /* margin-left: auto;
-    margin-right: auto; */
-    border-bottom: 2px;
-    
+  display: flex;
+  justify-content: start;
+  background-color: rgb(217, 218, 218);
+  border-bottom: 2px;
 }
 
 .list {
-   
-    display: flex;
-    list-style:none;
-    align-items: center;
-    margin-left: 25px;
-
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: 25px;
 }
 .item {
- 
-    display: flex;
-     font-size: 18;
-    color: black;
-    margin-right: 10;
-    text-decoration:none;
-    align-items: center;
-    padding-left: 10px;         
+  display: flex;
+  font-size: 18;
+  color: black;
+  margin-right: 10;
+  text-decoration: none;
+  align-items: center;
+  padding-left: 10px;
 }
-
 
 .container {
-    width: 1400px;
-    border: 2;
-    border-color: black;
-    padding-top: 30px;
-    margin-left: auto;
+  width: 1400px;
+  border: 2;
+  border-color: black;
+  padding-top: 30px;
+  margin-left: auto;
   margin-right: auto;
-
 }
-/* .title {
-  fontWisght: 500,
-  fontSize: 36,
-  textAlign: 'center',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-},
-title_input: {
-    fontSize: 18, 
-    fontWisght: 100,
-paddingTop: 10,
-paddingBottom: 5,
-},
-input: {
-  fontWisght: 100,
-  fontSize: 24,
-  textAlign: 'center',
-},
-section: {
-    width: 300,
-marginTop: 30,
-border: '1px solid grey',
-borderRadius: '10px',
-padding: 10,
-marginLeft: 'auto',
-  marginRight: 'auto',
-    },
-button: {
-    fontSize: 16,
-    marginTop: 15,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    border: '1px solid grey',
-    borderRadius: '2px',
-   
-} 
-}; */

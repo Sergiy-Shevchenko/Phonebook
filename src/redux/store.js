@@ -12,7 +12,7 @@ import {
 import { contactsReduser } from './contacts/contacts-slice';
 import { filterReducer } from './contacts/filter-slice';
 import { authReducer } from './ayth/auth-slice';
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/lib/storage';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -25,8 +25,8 @@ const middleware = [
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token']
-}
+  whitelist: ['token'],
+};
 
 export const store = configureStore({
   reducer: {
@@ -36,7 +36,6 @@ export const store = configureStore({
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
-
 });
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);

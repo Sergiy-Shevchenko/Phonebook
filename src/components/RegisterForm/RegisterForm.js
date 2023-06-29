@@ -4,7 +4,6 @@ import { register } from '../../redux/ayth/auth-operation';
 
 const styles = {
   container: {
-   
     paddingTop: 30,
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -15,12 +14,14 @@ const styles = {
     textAlign: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
+    color: 'rgb(0, 139, 252)',
   },
   title_input: {
     fontSize: 18,
     fontWisght: 100,
     paddingTop: 10,
     paddingBottom: 5,
+    color: 'rgb(0, 139, 252)',
   },
   input: {
     // fontWisght: 100,
@@ -29,7 +30,7 @@ const styles = {
   section: {
     width: 230,
     marginTop: 30,
-    border: '1px solid grey',
+    border: '1px solid rgb(0, 139, 252)',
     borderRadius: '10px',
     padding: 10,
     marginLeft: 'auto',
@@ -42,6 +43,7 @@ const styles = {
     marginRight: 'auto',
     border: '1px solid grey',
     borderRadius: '2px',
+    color: 'rgb(0, 139, 252)',
   },
 };
 
@@ -82,7 +84,6 @@ export const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
           <label>
             <h3 style={styles.title_input}>Name</h3>
-
             <input
               style={styles.input}
               type="text"
@@ -94,7 +95,6 @@ export const RegisterForm = () => {
 
           <label>
             <h3 style={styles.title_input}>E-mail</h3>
-
             <input
               style={styles.input}
               type="email"
@@ -106,7 +106,6 @@ export const RegisterForm = () => {
 
           <label>
             <h3 style={styles.title_input}>Password</h3>
-
             <input
               style={styles.input}
               type="password"
